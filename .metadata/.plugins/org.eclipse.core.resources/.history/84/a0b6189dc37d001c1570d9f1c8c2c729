@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Lab3Test
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Please enter radius (r), height (h) and (l): ");
+		double r = in.nextDouble();
+		double h = in.nextDouble();
+		double l = in.nextDouble();
+		
+		double volSphere = TestMethods.sphereVolume(r);
+		double surfSphere = TestMethods.sphereSurface(r);
+		double volCylinder = TestMethods.cylinderVolume(r, h);
+		double surCylinder = TestMethods.cylinderSurface(r, h);
+		double volCone = TestMethods.coneVolume(r, h);
+		double surfCone = TestMethods.coneSurface(r, h);
+		
+		System.out.println("Spehere volume of " + r + " is = " + sphereVolume(r));
+		System.out.println("Sphere surface of " + r + " is = " + sphereSurface(r));
+		System.out.println("Cylinder volume of " + r + " and " + h + " is = " + cylinderVolume(r, h));
+		System.out.println("Cylinder surface of " + r + " and " + h + " is = " + cylinderSurface(r, h));
+		System.out.println("Cone volume of " + r + " and " + h + " is = " + coneVolume(r, h));
+		System.out.println("Cone surface of " + r + " and " + h + " is = " + coneSurface(r, h));
+			
+		in.close();
+		}
+}

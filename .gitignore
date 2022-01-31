@@ -4,6 +4,11 @@
 # Log file
 *.log
 
+# power point files
+*.pptx
+*.ppt
+*.pdf
+
 # BlueJ files
 *.ctxt
 
