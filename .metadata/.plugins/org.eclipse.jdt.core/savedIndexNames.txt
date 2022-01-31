@@ -1,4 +1,0 @@
-INDEX VERSION 1.129+C:\Users\Natalia\Desktop\Software Design with AI in Cloud\Year_1\Semester_2\Software_Development\.metadata\.plugins\org.eclipse.jdt.core
-2768476762.index
-1259207542.index
-1007340512.index
