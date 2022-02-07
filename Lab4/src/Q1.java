@@ -36,7 +36,7 @@ public class Q1
 		labels to indicate what each element is.*/
 		for(int i = 0; i < values.length; i++)
 		{
-			System.out.println(i + " : " + values[i]);
+			System.out.println("["+i+"]" + " : " + values[i]);
 		}
 		
 		System.out.println();
@@ -45,11 +45,11 @@ public class Q1
 		
 		for(int i = values.length-1; i > 0; i--)			// -1 as index position starts from 0
 		{
-			System.out.println(i + " : " + values[i]);
+			System.out.println("["+i+"]" + " : " + values[i]);
 		}
 		
 		System.out.println();
-		/*Use an enhanced for loop to print all the values in the array
+		/* (i) Use an enhanced for loop to print all the values in the array
 		without labels.*/
 		for(double num : values)
 		{
