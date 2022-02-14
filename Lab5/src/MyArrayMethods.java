@@ -3,11 +3,12 @@ import java.util.Scanner;
 
 public class MyArrayMethods 
 {
-	/* Fills an integer array with values between the ranges Min and Max
+	/** Fills an integer array with values between the ranges Min and Max
 	 * @param values - the array to be filled
 	 * @param rangeMin - min range of the values to be generated
 	 * @param rangeMax - max range of the values to be generated*/
 	
+	// (Q1)
 	public static void fillRandom(int[] values, int rangeMin, int rangeMax)
 	{
 		for (int i = 0; i < values.length; i++)
@@ -20,25 +21,21 @@ public class MyArrayMethods
 		}		
 	}
 	
+	// (Q2) 
 	public static void fillRandom(double[] values, double rangeMin, double rangeMax)
 	{
 		for (int i = 0; i < values.length; i++)
 		{
-			values[i] = (double) ((Math.random() * rangeMax - rangeMin)+ rangeMin);
-		/*	if (values[i] > rangeMax)
-			{
-				values[i] = rangeMax;
-			}
-		*/	
+			values[i] = (double) ((Math.random() * rangeMax - rangeMin)+ rangeMin);	
 		}		
 	}
 	
-	/* Fills an integer array from the keyboard; the array can be partially filled
+	/** Fills an integer array from the keyboard; the array can be partially filled
 	 * The user is informed if the array is full and input should be stopped
 	 * @param values The array to be filled
 	 * @return the currentSize of the partially filled array */
 	 
-	
+	// (Q3)
 	public static int fillPartial(int[] values)
 	{
 		int currentSize = 0;
@@ -53,9 +50,11 @@ public class MyArrayMethods
 		return currentSize;
 	}
 	
-	public static double fillPartial(double[] values)
+	// (Q4) 
+	public static int fillPartial(double[] values)
 	{
 		int currentSizeDouble = 0;
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter double values: ");
 		while (in.hasNextDouble() && currentSizeDouble < values.length)
@@ -67,19 +66,21 @@ public class MyArrayMethods
 		return currentSizeDouble;
 	}
 	
-	//Q5 create an integer array first
+	/** Fills an two dimensional integer array with values between the ranges Min and Max
+	 * @param values - the array to be filled 
+	 * @param rangeMin - the min range to be generated
+	 * @param rangeMax - the max range to be generated
+	 */
+	// (Q5) 
 	public static void fillRandom(int[][] values, int rangeMin, int rangeMax)
-	{
+	{	
 		for (int i = 0; i < values.length; i++)
-		{ 
-			System.out.print(values[i]);
-			/*for (int j = 0; j < values.length; j++)
+		{
+			for (int j = 0; j < values[i].length; j++)
 			{
-				System.out.print(values[i][j]);
+				values[i][j] = (int) ((Math.random() * rangeMax - rangeMin)+ rangeMin);
 			}
-		}	
-		System.out.print("j[" + j + "] " + values[i][j]);*/
-	}
-	
+		}
+		System.out.print("e: " + values);
+	}	
 }
- 

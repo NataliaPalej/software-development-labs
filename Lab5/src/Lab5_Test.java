@@ -35,9 +35,9 @@ public class Lab5_Test
 		
 		//create second array and partially fill with doubles
 		double[] d = new double[10];
-		double currentSizeDouble = MyArrayMethods.fillPartial(d);
+		int currentSizeDouble = MyArrayMethods.fillPartial(d);
 		System.out.println("d: " + Arrays.toString(d));
-		
+		Arrays.sort(d, 0, currentSizeDouble);
 		System.out.println("d: " + Arrays.toString(d));
 		
 		System.out.println(); 
@@ -46,6 +46,10 @@ public class Lab5_Test
 		MyArrayMethods.fillRandom(e, 1, 10);
 		System.out.println("e: " + Arrays.toString(e));
 		
+		for (int i = 0; i < e.length; i++)
+		{
+			System.out.println("e[" + i + "] " + Arrays.toString(e[i]));
+		}
 		
 	}
 
