@@ -71,6 +71,9 @@ public class Rectangle
 		return 2*(this.length+this.width);
 	}
 	
+	/**
+	 * Prints the content of rectangle object
+	 */
 	public void print()
 	{
 		System.out.println("Rectangle:\nWidth: " + width + "\nLength: " + length + "\nArea: " + area() + "\nPerimeter: " + perimeter());
