@@ -1,34 +1,41 @@
-
 public class Q1 
 {
 	private int square;
 	private int length;
-	private double area;
-	private double p;
-	private double d;
+	
+	/**
+	 * Constructor 
+	 * @param square length
+	 */
+	public Q1(int x) 
+	{
+		//setting length of square to 1 as default
+		length = 1;
+	}
+	
+	/**
+	 * @param length the length to set
+	 */
+	public void setLength(int x) 
+	{
+		this.length = x;
+	}
 	
 	/**
 	 * @return the length
 	 */
-	public int getLength() {
+	public int getLength() 
+	{
 		return length;
 	}
 
+	
 	/**
-	 * @param length the length to set
+	 * @param square the square to set
 	 */
-	public void setLength(int length) {
-		this.length = length;
-	}
-
-
-	/**
-	 * Constructor 
-	 * @param square
-	 */
-	public Q1(int square) 
+	public void setSquare(int x) 
 	{
-		square = length;
+		square = x;
 	}
 	
 	/**
@@ -39,54 +46,48 @@ public class Q1
 		return square;
 	}
 	
-	/**
-	 * @param square the square to set
-	 */
-	public void setSquare(int square) 
-	{
-		square = length;
-	}
 	
 	/**
 	 * @param area, the area of square
 	 */
-	public double area(double length)
+	public double area()
 	{
-		return area = Math.pow(length, 2);
+		return Math.pow(length, 2);
 	}
 	
 	/**
 	 * @param p, the perimeter of square
 	 */
-	public double perimeter(double length)
+	public int perimeter()
 	{
-		return p = 4*length;
+		return 4*length;
 	}
 	
 	/**
 	 * @param d, the diagonal of square
 	 */
-	public double diagonal(double length)
+	public double diagonal()
 	{
-		return d = Math.sqrt(2)*length;
+		//rounding up to 2 decimal places
+		double d;
+		d = Math.sqrt(2)*length;
+		return Math.round(d*100.0)/100.0;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	
-	public String toString() 
-	{
-		return "Q1 [square=" + square + ", length=" + length + ", area=" + area + ", p=" + p + ", d=" + d + "]";
-	}
-	
 	
 	/**
 	 * Method to display content of Square
 	 */
 	public void print()
 	{
-		System.out.println("Q1 [square=" + square + ", length=" + length + ", area=" + area + ", p=" + p + ", d=" + d + "]");
+		System.out.println("Length = " + length + "\nArea = " + area() + "\nPerimeter = " + perimeter() + "\nDiagonal = " + diagonal());
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		return "Length =" + length + "\nArea = " + area() + "\nPerimeter = " + perimeter() + "\nDiagonal = " + diagonal();
 	}
 	
 }
