@@ -2,6 +2,7 @@ public class Circle
 {
 	private double radius;
 	
+	//Constructor for Circle object
 	public Circle(double radius)
 	{
 		this.radius = radius;
