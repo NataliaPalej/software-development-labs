@@ -54,7 +54,7 @@ public class Account
 		}
 		else
 		{
-			System.out.println("Your balance or over draft limit is too low! Cannot withdraw the amount.");
+			System.out.println("Your balance or over draft limit is too low! Cannot withdraw the amount.\nYou tried to withdraw: " + sum + "\nYour balance is: " + this.balance + "\nOverdraft limit: " + this.overDraftLimit);
 		}
 	}
 	
