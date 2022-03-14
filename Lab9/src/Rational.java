@@ -9,7 +9,14 @@ public class Rational
 	 */
 	public Rational(int num, int dum) {
 		this.num = num;
-		this.dum = dum;
+		if (dum == 0)
+		{
+			this.dum = 1;
+		}
+		else
+		{
+			this.dum = dum;
+		}
 		lowestNumber();
 	}
 	/**
@@ -29,22 +36,20 @@ public class Rational
 	 * @return the dum
 	 */
 	public int getDum() {
-		if(dum == 0)
-		{
-			System.out.println("Error dum must be higher than 0");
-		}
-		else
-		{
-			this.dum = dum;
-		}
-		
 		return dum;
 	}
 	/**
 	 * @param dum the dum to set
 	 */
 	public void setDum(int dum) {
-		this.dum = dum;
+		if (dum == 0)
+		{
+			this.dum = 1;
+		}
+		else
+		{
+			this.dum = dum;
+		}
 
 	}
 	
@@ -69,6 +74,37 @@ public class Rational
 			}
 		}
 	}
+	
+	public void add(Rational r)
+	{
+		this.num = (this.num*r.dum) + (this.dum*r.num);
+		this.dum = this.dum*r.dum;		
+		lowestNumber();
+	}
+	
+	public void sub(Rational r)
+	{
+		this.num = (this.num*r.dum) - (this.dum*r.num);
+		this.dum = this.dum*r.dum;		
+		lowestNumber();
+	}
+	
+	public void multi(Rational r)
+	{
+		this.num = (this.num*r.num);
+		this.dum = this.dum*r.dum;		
+		lowestNumber();
+	}
+	
+	public void div (Rational r)
+	{
+		this.num = (this.num * r.dum);
+		this.dum = (this.dum * r.num);
+		lowestNumber();
+		
+				
+	}
+	
 	
 
 }
