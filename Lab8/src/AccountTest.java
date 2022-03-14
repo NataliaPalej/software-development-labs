@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /** Testing Account object
  * @author Natalia
  */
@@ -25,6 +28,7 @@ public class AccountTest {
 		System.out.println();
 		a2.deposit(300);
 		a2.print();
+		}
 	}
 
 }
